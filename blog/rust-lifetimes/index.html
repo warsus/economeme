@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title></title>
+
+      
+      
+
+      <!-- CSS -->
+      
+      <link rel="stylesheet" href="https://warsus.github.io/economeme/book.css">
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="menu">
+            
+            
+            <nav role="navigation">
+                <ul>
+                    
+                        
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;warsus.github.io&#x2F;economeme&#x2F;blog&#x2F;">
+                                    <strong>1.</strong>
+                                    
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;warsus.github.io&#x2F;economeme&#x2F;blog&#x2F;rust-lifetimes&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Understanding Rust Lifetimes
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;warsus.github.io&#x2F;economeme&#x2F;blog&#x2F;second&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    The very second entry
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="book-content">
+                    
+    <h1>Understanding Rust Lifetimes</h1>
+    <h1 id="lifetimes">Lifetimes</h1>
+<p>Everytime a Rust Variable is Reference is borrowed Liftetimes are used to ensure validity of the programm.
+No memory corruption must occur.</p>
+<p>Each Refernce must only me borrowed once at every time.
+An object only exists while it's referenced in some scope.</p>
+<p>Scopes may share information about their Lifetime through Lifetime specifiers.</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">// Lifetimes are annotated below with lines denoting the creation
+// and destruction of each variable.
+// `i` has the longest lifetime because its scope entirely encloses 
+// both `borrow1` and `borrow2`. The duration of `borrow1` compared 
+// to `borrow2` is irrelevant since they are disjoint.
+fn main() {
+    let i = 3; // Lifetime for `i` starts. ────────────────┐
+    //                                                     │
+    { //                                                   │
+        let borrow1 = &amp;i; // `borrow1` lifetime starts. ──┐│
+        //                                                ││
+        println!(&quot;borrow1: {}&quot;, borrow1); //              ││
+    } // `borrow1 ends. ──────────────────────────────────┘│
+    //                                                     │
+    //                                                     │
+    { //                                                   │
+        let borrow2 = &amp;i; // `borrow2` lifetime starts. ──┐│
+        //                                                ││
+        println!(&quot;borrow2: {}&quot;, borrow2); //              ││
+    } // `borrow2` ends. ─────────────────────────────────┘│
+    //                                                     │
+}   // Lifetime ends. ─────────────────────────────────────┘
+</span></code></pre>
+<p>just a random blog entry</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https:&#x2F;&#x2F;warsus.github.io&#x2F;economeme&#x2F;blog&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        
+        
+        
+        
+            
+            
+            
+                
+                    
+                
+            
+                
+            
+        
+    
+
+            </div>
+        </div>
+
+        
+            
+            <script type="text/javascript" src="https://warsus.github.io/economeme/book.js"></script>
+        
+    </body>
+
+</html>
