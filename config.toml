@@ -1,6 +1,6 @@
 # The URL the site will be built for
 #base_url = "https://heldenb.org"
-base_url = "file:///C:/Users/zerst/my_site/public"
+base_url = "https://warsus.github.io/economeme/"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
